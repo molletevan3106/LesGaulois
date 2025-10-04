@@ -20,5 +20,15 @@ public class Romain {
 	private String prendreParole() {
 		return "Le romain " + nom + " : ";
 	}
+
+	public void recevoirCoup(int forceCoup) {
+		this.force=this.force-forceCoup;
+		if (this.force<1) {
+			parler("J'abandonne !");
+		} else {
+			parler("Aie");
+		}
+		
+	}
 }
 
