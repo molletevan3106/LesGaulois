@@ -5,6 +5,7 @@ import objets.Chaudron;
 public class Druide {
 	private String nom;
 	private int force;
+	private Chaudron chaudron=new Chaudron();
 	
 	public Druide(String nom, int force) {
 		this.nom = nom;
@@ -22,7 +23,7 @@ public class Druide {
 	private String prendreParole() {
 		return "Le druide " + nom + " : ";
 	}
-	Chaudron chaudron=new Chaudron();
+	
 	
 	public void fabriquerPotion(int quantite,int forcePotion) {
 		chaudron.remplirChaudron(quantite,forcePotion);

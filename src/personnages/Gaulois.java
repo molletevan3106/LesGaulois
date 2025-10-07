@@ -16,6 +16,10 @@ public class Gaulois {
 	public String getNom() {
 		return nom;
 	}
+	
+	public void setVillage(Village village) {
+		this.village = village;
+	}
 
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "\"" + texte + "\"");
@@ -31,11 +35,7 @@ public class Gaulois {
 		return  nom;
 	}
 	
-	public static void main(String[] args) {
-		Gaulois asterix= new Gaulois("Astérix",8);
-		System.out.println(asterix);
-		
-	}
+	
 	
 	public void frapper(Romain romain) {
 		String nomRomain=romain.getNom();
@@ -51,7 +51,21 @@ public class Gaulois {
 	public void boirePotion(int forcePotion) {
 		this.effetPotion=forcePotion;
 	}
-
 	
+	 public void sePresenter() {
+	        if (village == null) {
+	            parler("Bonjour, je m'appelle " + nom + ". Je voyage de villages en villages.");
+	        } else if (village.getChef() == this) {
+	            parler("Bonjour, je m'appelle " + nom + ". Je suis le chef du village " + village.getNom() + ".");
+	        } else {
+	            parler("Bonjour, je m'appelle " + nom + ". J'habite le village " + village.getNom() + ".");
+	        }
+	    }
+	 
+	public static void main(String[] args) {
+		Gaulois asterix= new Gaulois("Astérix",8);
+		System.out.println(asterix);
+		
+	}
 	
 }
