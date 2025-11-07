@@ -7,6 +7,7 @@ public class Village {
 	private int nbVillageois=0;
 	private Gaulois[] villageois;
 	private Gaulois chef;
+	private Village village;
 	
 	public Village(int NB_VILLAGEOIS_MAX) {
 		villageois=new Gaulois[NB_VILLAGEOIS_MAX];
